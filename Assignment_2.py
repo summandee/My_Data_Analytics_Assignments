@@ -84,11 +84,12 @@ else:
 # Take user input for age
 age = int(input("Enter your age: "))
 # Take user input for citizenship status
-citizenship_status = input("Enter your citizenship status (citizen/non-citizen): ").strip().lower()
-special_region = input(" special region : yes or no ")
+citizenship_status = input("Enter your citizenship status (citizen/non-citizen):").strip().lower()
+special_region = input("special region yes/no : ")
 
 # Check eligibility based on the conditions
-if  (age >= 16 and citizenship_status == "citizen") and (special_region == "yes") or \
+if  (age >= 16 and citizenship_status == "citizen") and\
+    (special_region == "yes") or \
     (age >= 18 and citizenship_status == "citizen"): 
 
     print("Eligible to vote")
