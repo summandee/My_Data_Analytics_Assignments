@@ -225,6 +225,14 @@ if password.isdigit():
     print("has_digits  : True")
 else:
     print("has_digits  : False")
+if password.isspace():
+    print("has_characters_spaces  : True")
+else:
+    print("has_characters_spaces  : False")
+if not password.isalnum():
+    print("has_special_characters  : True")
+else:
+    print("has_special_characters  : False")
 
 #__________________________________________End Q-9___________________________________________
 
