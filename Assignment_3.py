@@ -15,6 +15,8 @@ else:
     annual_income = int(input("Enter the person's  monthly income : "))
     if (credit_score >= 650 or credit_score >= 700) and (annual_income == 30000 or annual_income >= 25000  ):
         print("Eligible for loan")
+    else:
+        print("Not Eligible for loan")
 
 #*******************************  End  **********************************
 
@@ -178,7 +180,20 @@ else:
 # Q5. Write a python program to know data type of each element stored in a tuple, append the data types in a list.
 # Show final output in a list as data types of tuple elements
 # x = (11,22.333,'apple',[1,2,3],('a','b'))
-
+# Given tuple
+# Simple Method:
+x = (11, 22.333, 'apple', [1, 2, 3], ('a', 'b'))
+# List to store data types
+data_types = []
+# Iterate through each element in the tuple and append its data type to the list
+data_types.append(type(x[0]).__name__)
+data_types.append(type(x[1]).__name__)
+data_types.append(type(x[2]).__name__)
+data_types.append(type(x[3]).__name__)
+data_types.append(type(x[4]).__name__)
+print("Data types of tuple elements:", data_types)
+#_______________________________________________________
+## By Loop:
 # Given tuple
 x = (11, 22.333, 'apple', [1, 2, 3], ('a', 'b'))
 
@@ -188,7 +203,7 @@ data_types = []
 # Iterate through each element in the tuple and append its data type to the list
 for element in x:
     data_types.append(type(element).__name__)
-
+data_types.append(type(x[0]).__name__)
 # Display the final list of data types
 print("Data types of tuple elements:", data_types)
 
